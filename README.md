@@ -107,8 +107,5 @@ The terminal interface provides options to:
 ## Memory Configuration
 
 To enable memory persistence, set `DATABASE_URL` in your `.env`:
-```
-DATABASE_URL=postgresql://kunani_user:kunani_password@localhost:5432/kunani
-```
 
 The checkpointer automatically creates and manages checkpoint tables for conversation state.
