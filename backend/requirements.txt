@@ -1,0 +1,13 @@
+# Core
+pydantic>=2.6.0
+python-dotenv==1.0.0
+
+# LLM
+openai>=1.0
+instructor>=0.4.8
+google-generativeai==0.11.0
+
+# Flow Control (LangGraph for orchestration only)
+langgraph>=0.6.0
+
+

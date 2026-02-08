@@ -2,6 +2,13 @@
 
 A no-nonsense issue tracking system built with LangGraph and Langfuse.
 
+## Documentation
+
+| Link | Description |
+|------|-------------|
+| **[Building Kunani end-to-end](docs/BUILDING_KUNANI_END_TO_END.md)** | Chaptered guide (setup → LLM → models → DB → tools → graph → agents → API → frontend → observability → deployment). For the [Agentic AI e2e](https://youtube.com/@agenticaie2e) YouTube series. |
+| [Tools & memory](TOOLS_AND_MEMORY.md) | How tools and PostgreSQL checkpointer work in this repo. |
+
 ## Features
 
 - Create and track issues
@@ -13,12 +20,32 @@ A no-nonsense issue tracking system built with LangGraph and Langfuse.
 
 ## Setup
 
-1. Install dependencies:
+1. Create and activate virtual environment:
+
+**Windows (PowerShell):**
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+**Windows (Command Prompt):**
+```cmd
+python -m venv venv
+venv\Scripts\activate.bat
+```
+
+**Linux/Mac:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Set up database:
+3. Set up database:
 ```bash
 # Create database and user
 createdb kunani
@@ -34,14 +61,14 @@ Or use the setup script:
 python setup_db.py
 ```
 
-3. Configure environment:
+4. Configure environment:
 ```bash
 cp env.example .env
 # Edit .env with your credentials
 # IMPORTANT: Set DATABASE_URL for memory/checkpointing
 ```
 
-4. Run:
+5. Run:
 ```bash
 python main.py
 ```
